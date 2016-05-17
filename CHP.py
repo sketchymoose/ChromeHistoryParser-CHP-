@@ -40,7 +40,7 @@ with con:
     downloadsPath= cwd + "/downloads.csv"
     f = open(downloadsPath,'w')
     writer= csv.writer(f)
-    writer.writerow(('Current Path','Downloading Time (local)','Referrer'))
+    writer.writerow(('Current Path','Downloading Time (UTC)','Referrer'))
     
     
     for row in rows:
@@ -54,7 +54,7 @@ with con:
     visitedURLsPath= cwd + "/visitedURLs.csv"
     f = open(visitedURLsPath,'w')
     writer= csv.writer(f)
-    writer.writerow(('URL','urlID','Last Visited Time (local)','Visit Count'))
+    writer.writerow(('URL','urlID','Last Visited Time (UTC)','Visit Count'))
     
     for row in rows:
         writer.writerow((row[0],row[1],row[2],row[3]))
